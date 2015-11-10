@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>Angular Day 2</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+
+  <div class="container" ng-controller="SearchController">
+    <h2>{{ title }}</h2>
+
+
+    <form ng-submit="getPhoto(query)">
+      <input type="text" placeholder="Search for Photo" ng-model="query">
+      <button>Search</button>
+    </form>
+
+    <div class="photoHolder">
+      <img ng-src="{{ photoUrl }}">
+    </div>
+    
+  </div>
+  
+  <script src="js/main.js"></script>
+</body>
+</html>
